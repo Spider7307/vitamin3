@@ -39,12 +39,12 @@ const question2 = () => {
   const todoListUl = document.getElementById("todo-list");
 
   /** YOUR CODE HERE */
-  addTodoButton.addEventListener("click",(event) => {
+  addTodoButton.addEventListener("click", (event) => {
     const s = document.createElement("li")
     todoListUl.append(s);
-    s.textContent=taskName.value
+    s.textContent=taskName.value;
+    taskName.value='';
   });
-
 };
 
 /**
