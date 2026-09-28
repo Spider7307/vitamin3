@@ -40,10 +40,12 @@ const question2 = () => {
 
   /** YOUR CODE HERE */
   addTodoButton.addEventListener("click", (event) => {
-    const s = document.createElement("li")
-    todoListUl.append(s);
-    s.textContent=taskName.value;
-    taskName.value='';
+    if (taskName.value.trim()!=='') {
+      const s = document.createElement("li")
+      todoListUl.append(s);
+      s.textContent=taskName.value;
+      taskName.value='';
+    }
   });
 };
 
